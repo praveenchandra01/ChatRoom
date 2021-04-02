@@ -19,6 +19,6 @@ io.on('connection',(socket)=>{
     socket.on('event',(msg)=>{
         // console.log(msg)
         socket.broadcast.emit('event',msg)
-    })
-})
+    });
+});
 //npm run test
