@@ -32,7 +32,7 @@ function appendMessage(msg,type){
     let className = type;
     mainDiv.classList.add(className,'message')
 
-    let markup = `<h4>${msg.user}</h4>
+    let markup = `<h4>You</h4>
                 <p>${msg.message}</p>`
     mainDiv.innerHTML = markup;
     messageArea.appendChild(mainDiv)    
@@ -45,6 +45,12 @@ socket.on('event',(msg)=>{
     scrollToBottom()
 
 })
+
+// socket.emit('newUsr',n);
+// socket.on('event',n=>{
+//     appendMessage(`${n} is joined`,outgoing)
+
+// })
 
 function scrollToBottom(){
     messageArea.scrollTop = messageArea.scrollHeight
