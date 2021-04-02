@@ -54,4 +54,4 @@ socket.on('event',(msg)=>{
 
 function scrollToBottom(){
     messageArea.scrollTop = messageArea.scrollHeight
-}
+};
