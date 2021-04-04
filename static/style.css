@@ -21,7 +21,7 @@ body{
     border-radius: 8px;
 }
 section.chat__section{
-    width: 500px;
+    width: 450px;
     max-width: 90%;
     height: 543px;
     background-color: #fff;
@@ -43,7 +43,7 @@ section.chat__section{
 }
 .message__area{
     height: 450px;
-    padding: 15px;
+    padding: 2px 15px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
@@ -53,8 +53,9 @@ section.chat__section{
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 40px;
-    max-width: 300px;
+    max-width: 222px;
     position: relative;
+    word-wrap: break-word;
 }
 .incoming{
     background:  #9e99f3;
@@ -65,20 +66,60 @@ section.chat__section{
     color: #fff;
     margin-left: auto;
 }
-.message h4{
+/* .message h4{
+    position: absolute;
+    top: -20px;
+    left: 0;
+    color:#333;
+    font-size: 14px;
+} */
+.outgoing h4{
+    position: absolute;
+    top: -20px;
+    right: 0;
+    color:#333;
+    font-size: 14px;
+}
+.incoming h4{
     position: absolute;
     top: -20px;
     left: 0;
     color:#333;
     font-size: 14px;
 }
+
 textarea{
-   
-    width: 100%;
+    width: 94%;
     border: none;
     padding: 15px;
     font-size: 15px;
     outline: none;
     background-color: #6c8c8d50;
     overflow: hidden;
+    resize: none;
+    word-wrap: break-word;
+}
+
+.join{
+    padding: 0px 15px;
+    margin: 0px auto;
+    background-color: #c5e9ea;
+    border-radius: 5px;
+    margin-bottom: 22px;
+}
+.bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    padding: 9px 11px;
+    outline: none;
+    height: 48px;
+    border: none;
+    background-color: #6c8c8d50;
+}
+.bottom img{
+    filter : invert(35%);
 }

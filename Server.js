@@ -12,13 +12,24 @@ app.get('/',(req,res)=>{
     res.sendFile(__dirname + '/index.html');
 })
 
+const users = {}
 //Soket
 const io = require('socket.io')(http)
 io.on('connection',(socket)=>{
+    socket.on('user',(name)=>{
+        users[socket.id] = name;
+        socket.broadcast.emit('user',name)
+    });
     console.log('New user joinned');
+
     socket.on('event',(msg)=>{
-        // console.log(msg)
         socket.broadcast.emit('event',msg)
     });
+
+    socket.on('disconnect',(n)=>{
+        socket.broadcast.emit('left',users[socket.id]);
+    });
+
+    
 });
-//npm run test
+//npm run dev
