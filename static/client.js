@@ -30,10 +30,11 @@ function sendMessage(message){
     message :message.trim()   
     } 
     //Append
+    if (msg.message !== ""){
     appendMessage(msg,"outgoing")
     textarea.value=''
     scrollToBottom()
-
+    }
     //Send to server
     socket.emit('event',msg)
 
