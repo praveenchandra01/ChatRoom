@@ -36,7 +36,9 @@ function sendMessage(message){
     scrollToBottom()
     }
     //Send to server
+    if (msg.message !== ""){
     socket.emit('event',msg)
+    }
 
 }
 
