@@ -8,9 +8,12 @@ do{
    name = prompt('Enter your name :');
 } while(!name)
 
+// First event called from here
 socket.emit('user',name)
+//Recive event
 socket.on("user-joined",name => {
     appendUser(name)
+    scrollToBottom()
 })
 
 textarea.addEventListener('keyup',(e)=>{
@@ -20,16 +23,15 @@ textarea.addEventListener('keyup',(e)=>{
 })
 bottom.addEventListener('submit',(e)=>{
         e.preventDefault()
-        sendMessage(textarea.value)
-    
+        sendMessage(textarea.value)    
 })
+
 
 function sendMessage(message){
     let msg = {
     user: name,
     message :message.trim()   
     } 
-    //Append
     if (msg.message !== ""){
     appendMessage(msg,"outgoing")
     textarea.value=''
@@ -37,10 +39,10 @@ function sendMessage(message){
     }
     //Send to server
     if (msg.message !== ""){
-    socket.emit('event',msg)
+    socket.emit('s_event',msg) //Msg send event
     }
-
 }
+
 
 function appendMessage(msg,className){
     let mainDiv = document.createElement('div');
@@ -57,7 +59,6 @@ function appendUser(name){
     let markup = `<p>${name} joined the chat</p>`
     userDiv.innerHTML = markup;
     messageArea.appendChild(userDiv)  
-    scrollToBottom()  
 }
 function removeUser(name){
     let userDiv = document.createElement('div');
@@ -65,22 +66,21 @@ function removeUser(name){
     let markup = `<p>${name} left the chat</p>`
     userDiv.innerHTML = markup;
     messageArea.appendChild(userDiv)    
-    scrollToBottom()
+    
 }
 
 //Recieve message
-socket.on('event',(msg)=>{
+socket.on('b_event',(msg)=>{ //broadcast event accept here
     appendMessage(msg,'incoming')
     scrollToBottom()
 })
-
-socket.on('user',(name)=>{
-    appendUser(name)
-})
-
 socket.on('left',(name)=>{
+    if(name !== null){
     removeUser(name)
+    scrollToBottom()
+    }
 })
 function scrollToBottom(){
     messageArea.scrollTop = messageArea.scrollHeight
 };
+

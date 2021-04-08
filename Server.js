@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const http = require('http').createServer(app)
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 8000
 
 http.listen(PORT,()=>{
     console.log(`Listening on port ${PORT}`);
@@ -18,12 +18,12 @@ const io = require('socket.io')(http)
 io.on('connection',(socket)=>{
     socket.on('user',(name)=>{
         users[socket.id] = name;
-        socket.broadcast.emit('user',name)
+        socket.broadcast.emit('user-joined',name)
+        console.log(`New user joinned ${name} : ${socket.id}`);
     });
-    console.log('New user joinned');
 
-    socket.on('event',(msg)=>{
-        socket.broadcast.emit('event',msg)
+    socket.on('s_event',(msg)=>{  //send event accept here
+        socket.broadcast.emit('b_event',msg) //brodcast event
     });
 
     socket.on('disconnect',(n)=>{
