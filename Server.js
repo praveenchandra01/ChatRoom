@@ -29,7 +29,5 @@ io.on('connection',(socket)=>{
     socket.on('disconnect',(n)=>{
         socket.broadcast.emit('left',users[socket.id]);
     });
-
-    
 });
 //npm run dev
