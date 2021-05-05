@@ -12,14 +12,21 @@ body{
     background-color: #526683;
     font-family: 'Roboto', sans-serif;
 }
-::-webkit-scrollbar{
-    width: 6px;
-    background: #f8f8f8;
+
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-thumb {
+  width: 6px;
+  border-radius: 8px;    
+  /* border: 1px solid transparent; */
 }
-::-webkit-scrollbar-thumb{
-    background-color: #9b9b9b;
-    border-radius: 8px;
+
+*::-webkit-scrollbar-thumb {    
+    box-shadow: inset 0 0 0 10px;
 }
+.message__area:hover {
+    color: rgb(145, 146, 146);
+}
+
 section.chat__section{
     max-width: 90%;
     background-color: #fff;
@@ -46,6 +53,8 @@ section.chat__section{
     flex-direction: column;
     overflow-y: auto;
     padding-top: 40px;
+    color: rgb(0, 0, 0,0);
+    transition: color .3s ease;
 }
 .message{
     padding: 10px;
@@ -85,6 +94,9 @@ section.chat__section{
     background-color: #c5e9ea;
     border-radius: 11px;
     margin-bottom: 22px;
+}
+.join > p{
+    color :black;
 }
 .bottom {
     width: 100%;
