@@ -17,7 +17,7 @@ body{
 *::-webkit-scrollbar-thumb {
   width: 6px;
   border-radius: 8px;    
-  /* border: 1px solid transparent; */
+  border: 1px solid transparent;
 }
 
 *::-webkit-scrollbar-thumb {    
@@ -48,16 +48,16 @@ section.chat__section{
 }
 .message__area{
     height: 450px;
-    padding: 2px 15px;
+    padding: 2px 12px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     padding-top: 40px;
     color: rgb(0, 0, 0,0);
-    transition: color .3s ease;
+    transition: color .3s ease-in-out;
 }
 .message{
-    padding: 10px;
+    padding: 8px 13px;
     margin-bottom: 40px;
     max-width: 160px;
     position: relative;
@@ -66,13 +66,13 @@ section.chat__section{
 .incoming{
     background:#65db84;
     color: #3a3a3f;
-    border-radius:  24px 24px 24px 0px;
+    border-radius:  24px 24px 24px 5px;
 }
 .outgoing{
     background: #c8d1de;
     color: #171616;
     margin-left: auto;
-    border-radius:  25px 25px 0px 28px;
+    border-radius:  28px 25px 5px 28px;
 }
 .outgoing h4{
     position: absolute;
