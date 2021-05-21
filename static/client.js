@@ -7,6 +7,7 @@ let bottom = document.querySelector('.bottom');
 do{
    name = prompt('Enter your name :');
 } while(!name)
+greetUser(name);
 
 // First event called from here
 socket.emit('user',name)
@@ -52,6 +53,13 @@ function appendMessage(msg,className){
                   <p>${msg.message}</p>`
     mainDiv.innerHTML = markup;
     messageArea.appendChild(mainDiv)    
+}
+function greetUser(name){
+    let userDiv = document.createElement('div');
+    userDiv.classList.add('greet')
+    let markup = `<p>Welcome ${name}, Say hi to your friends </p>`
+    userDiv.innerHTML = markup;
+    messageArea.appendChild(userDiv)  
 }
 function appendUser(name){
     let userDiv = document.createElement('div');

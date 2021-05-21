@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -29,6 +30,7 @@ body{
 
 section.chat__section{
     max-width: 90%;
+    width: 400px;
     background-color: #fff;
     box-shadow :0 10px 15px -3px rgba(39, 39, 39, 0.3),0 4px 6px -2px rgba(0, 0, 0, 0.05);
     border-radius: 7px;
@@ -95,7 +97,18 @@ section.chat__section{
     border-radius: 11px;
     margin-bottom: 22px;
 }
+.greet{
+    padding: 0px 12px;
+    margin: 0px auto;
+    background-color: #d2dada;
+    border-radius: 11px;
+    margin-bottom: 22px;
+    text-align: center;
+}
 .join > p{
+    color :black;
+}
+.greet > p{
     color :black;
 }
 .bottom {
