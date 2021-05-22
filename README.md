@@ -1,5 +1,7 @@
 # ChatRoom
 A real time group chat application is developed where **web socket** is used for client-server connection
+- Minimal Front End
+- Clean Design
 
 ## Technology Used
 - NodeJS
