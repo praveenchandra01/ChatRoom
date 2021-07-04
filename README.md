@@ -11,7 +11,7 @@ A real time group chat application is developed where **web socket** is used for
 
 ## App is deployed on heroku
 <!-- [Access link](https://chat-room-x.herokuapp.com/) -->
-Access link : https://chat-room-x.herokuapp.com/
+Access link : https://wassup-chat-x.herokuapp.com/
 ## Preview
 ![](https://github.com/praveenchandra01/ChatRoom/blob/master/static/Preview1.png)
 
