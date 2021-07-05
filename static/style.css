@@ -150,3 +150,18 @@ textarea {
 .bottom img {
   filter: invert(35%);
 }
+
+@media only Screen and (max-width:495px){
+  section.chat__section{
+    max-width: 100%;
+    width: 100vw;
+    height: 100vh;
+  }
+  .bottom{
+    position: fixed;
+    bottom: 0;
+  }
+  .message__area{
+    height: -webkit-fill-available;
+  }
+}
