@@ -178,13 +178,13 @@ textarea {
     height: calc(100vh - 172px);
   }
   .bottom {
-    height: 60px;
     align-items: unset;
+    height: 60px;
   }
   textarea{
     padding: 20px;
     font-size: 20px;
-    height: 100%;
+    height: 60px;
   }
   .btn{
     height: 60px;
