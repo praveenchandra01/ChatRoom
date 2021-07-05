@@ -162,6 +162,9 @@ textarea {
   }
 }
 @media (min-height: 900px) {
+  section.chat__section{
+    max-width: 95%;
+  }
   .brand {
     height: 60px;
   }
