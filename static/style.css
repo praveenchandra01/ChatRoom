@@ -164,6 +164,7 @@ textarea {
 @media (min-height: 900px) {
   section.chat__section{
     max-width: 95%;
+    font-size: 18px;
   }
   .brand {
     height: 60px;
