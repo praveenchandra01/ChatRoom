@@ -163,18 +163,24 @@ textarea {
 }
 @media (min-height: 900px) {
   .brand {
-    height: 50px;
+    height: 60px;
+  }
+  .brand > img{
+    height: 55px;
+  }
+  .brand >h1{
+    font-size: 3rem;
   }
   .message__area{
-    height: calc(100vh - 122px);
+    height: calc(100vh - 172px);
   }
   .bottom {
     height: 60px;
     align-items: unset;
   }
   textarea{
-    padding: 12px;
-    font-size: 21px;
+    padding: 20px;
+    font-size: 20px;
   }
   .btn{
     height: 60px;
