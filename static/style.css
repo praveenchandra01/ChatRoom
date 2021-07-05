@@ -72,7 +72,7 @@ section.chat__section {
   margin-bottom: 30px;
   margin-top: 5px;
   width: fit-content;
-  max-width: 160px;
+  max-width: 250px;
   position: relative;
   word-wrap: break-word;
   box-shadow: 1px 2px 3px rgb(93 93 93 / 43%);
@@ -177,6 +177,10 @@ textarea {
   }
   .message__area{
     height: calc(100vh - 171px);
+  }
+
+  .message{
+    max-width: 300px;
   }
   .bottom {
     align-items: unset;
