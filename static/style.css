@@ -75,7 +75,7 @@ section.chat__section {
   max-width: 250px;
   position: relative;
   word-wrap: break-word;
-  box-shadow: 1px 2px 3px rgb(93 93 93 / 43%);
+  /* box-shadow: 1px 2px 3px rgb(93 93 93 / 43%); */
 }
 .incoming {
   background: #5dd89f;
